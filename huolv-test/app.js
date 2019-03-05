@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/build')));
 // 允许所有的访问，设置响应头
 app.use(function(req, res, next) {
   // res.cors('Access-Control-Allow-Origin', '*');
